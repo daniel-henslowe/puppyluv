@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PuppyLuv Paradise - Template B (Elegant & Minimal)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: {
+              50: '#faf7fc',
+              100: '#f4eef8',
+              200: '#ead9f1',
+              300: '#dbbde6',
+              400: '#c493d6',
+              500: '#a966c1',
+              600: '#8f4aa4',
+              700: '#7b5ea7',
+              800: '#5c3d6e',
+              900: '#4d345a',
+              brand: '#7b5ea7',
+              deep: '#5c4278',
+            },
+            teal: {
+              accent: '#5bbfba',
+            },
+            cream: '#fdfbf9',
+          },
+          fontFamily: {
+            'serif': ['Cormorant Garamond', 'serif'],
+            'sans': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', serif; }
+  </style>
+</head>
+<body class="bg-cream text-gray-800">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-cream/95 backdrop-blur-sm z-50 border-b border-purple-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex justify-between items-center h-20">
+        <img src="assets/logo.png" alt="PuppyLuv Paradise" class="h-12 rounded">
+
+        <!-- Mobile menu button -->
+        <button class="md:hidden p-2">
+          <svg class="w-6 h-6 text-purple-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-12">
+          <a href="#" class="text-gray-600 hover:text-purple-brand transition text-sm tracking-wide">Services</a>
+          <a href="#" class="text-gray-600 hover:text-purple-brand transition text-sm tracking-wide">About Us</a>
+          <a href="#" class="text-gray-600 hover:text-purple-brand transition text-sm tracking-wide">Gallery</a>
+          <a href="#" class="text-gray-600 hover:text-purple-brand transition text-sm tracking-wide">Contact</a>
+          <a href="#" class="bg-purple-brand text-white px-6 py-2.5 text-sm tracking-wide hover:bg-purple-deep transition">
+            Book Appointment
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16 md:py-0 w-full">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-purple-brand text-sm tracking-[0.3em] uppercase mb-6">Premium Pet Care</p>
+          <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl text-gray-900 leading-tight mb-8">
+            A sanctuary<br/>
+            <span class="text-purple-brand italic">for your</span><br/>
+            beloved companion
+          </h1>
+          <p class="text-gray-600 text-lg leading-relaxed mb-10 max-w-md">
+            Experience exceptional daycare, training, and grooming services in a serene, loving environment designed for discerning pet parents.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#" class="bg-purple-brand text-white px-8 py-4 text-sm tracking-wide hover:bg-purple-deep transition text-center">
+              Reserve Your Spot
+            </a>
+            <a href="#" class="border border-gray-300 text-gray-700 px-8 py-4 text-sm tracking-wide hover:border-purple-brand hover:text-purple-brand transition text-center">
+              Virtual Tour
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&h=750&fit=crop"
+                 alt="Elegant dog portrait"
+                 class="w-full h-[500px] lg:h-[600px] object-cover">
+            <div class="absolute inset-0 border border-purple-200 -translate-x-4 -translate-y-4 pointer-events-none"></div>
+          </div>
+
+          <!-- Stats -->
+          <div class="absolute -bottom-8 -left-8 bg-white shadow-xl p-8">
+            <div class="text-4xl font-serif text-purple-brand mb-1">500+</div>
+            <div class="text-sm text-gray-500 tracking-wide">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-20">
+        <p class="text-purple-brand text-sm tracking-[0.3em] uppercase mb-4">What We Offer</p>
+        <h2 class="font-serif text-4xl md:text-5xl text-gray-900">Our Services</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-px bg-gray-200">
+        <!-- Daycare -->
+        <div class="bg-white p-12 group hover:bg-purple-50 transition-colors duration-500">
+          <div class="w-16 h-16 border border-purple-brand flex items-center justify-center mb-8 group-hover:bg-purple-brand transition-colors duration-500">
+            <svg class="w-8 h-8 text-purple-brand group-hover:text-white transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl text-gray-900 mb-4">Daycare</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            A thoughtfully designed space where your dog can socialize, play, and rest in comfort throughout the day.
+          </p>
+          <a href="#" class="text-purple-brand text-sm tracking-wide inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+            Explore <span>→</span>
+          </a>
+        </div>
+
+        <!-- Training -->
+        <div class="bg-white p-12 group hover:bg-purple-50 transition-colors duration-500">
+          <div class="w-16 h-16 border border-purple-brand flex items-center justify-center mb-8 group-hover:bg-purple-brand transition-colors duration-500">
+            <svg class="w-8 h-8 text-purple-brand group-hover:text-white transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl text-gray-900 mb-4">Training</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Expert-led programs using positive reinforcement methods to nurture well-mannered, confident companions.
+          </p>
+          <a href="#" class="text-purple-brand text-sm tracking-wide inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+            Explore <span>→</span>
+          </a>
+        </div>
+
+        <!-- Grooming -->
+        <div class="bg-white p-12 group hover:bg-purple-50 transition-colors duration-500">
+          <div class="w-16 h-16 border border-purple-brand flex items-center justify-center mb-8 group-hover:bg-purple-brand transition-colors duration-500">
+            <svg class="w-8 h-8 text-purple-brand group-hover:text-white transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0 0L12 12"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl text-gray-900 mb-4">Grooming</h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Luxurious spa treatments and precision styling to keep your pet looking and feeling their absolute best.
+          </p>
+          <a href="#" class="text-purple-brand text-sm tracking-wide inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+            Explore <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=500&fit=crop"
+               alt="Dogs playing"
+               class="w-full h-[450px] object-cover">
+          <div class="absolute bottom-8 right-8 bg-purple-brand text-white p-8">
+            <div class="font-serif text-4xl mb-1">15+</div>
+            <div class="text-sm tracking-wide text-purple-200">Years of Excellence</div>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-purple-brand text-sm tracking-[0.3em] uppercase mb-4">Our Story</p>
+          <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-8">Built on love,<br/>driven by care</h2>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            PuppyLuv Paradise was founded with a simple belief: every dog deserves exceptional care in an environment that feels like home. Our facility combines modern amenities with genuine warmth.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Our team of certified professionals treats each guest as if they were our own, ensuring peace of mind for pet parents who trust us with their beloved companions.
+          </p>
+
+          <div class="grid grid-cols-2 gap-8 pt-8 border-t border-gray-200">
+            <div>
+              <div class="font-serif text-3xl text-purple-brand mb-2">24/7</div>
+              <div class="text-sm text-gray-500">Monitoring & Care</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl text-purple-brand mb-2">12</div>
+              <div class="text-sm text-gray-500">Certified Trainers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="py-24 bg-purple-brand">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+      <svg class="w-12 h-12 text-purple-300 mx-auto mb-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <blockquote class="font-serif text-3xl md:text-4xl text-white leading-relaxed mb-8">
+        "PuppyLuv Paradise isn't just a daycare—it's a second home for our beloved Bailey. The attention to detail and genuine care is unmatched."
+      </blockquote>
+      <div class="text-purple-200">
+        <div class="font-medium text-white">Alexandra Chen</div>
+        <div class="text-sm">Bailey's Mom • Client since 2021</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6 lg:px-12 text-center">
+      <p class="text-purple-brand text-sm tracking-[0.3em] uppercase mb-4">Begin the Journey</p>
+      <h2 class="font-serif text-4xl md:text-5xl text-gray-900 mb-6">Ready to experience the difference?</h2>
+      <p class="text-gray-600 mb-10">
+        Schedule a complimentary consultation and tour of our facilities.
+      </p>
+      <a href="#" class="inline-block bg-purple-brand text-white px-10 py-4 text-sm tracking-wide hover:bg-purple-deep transition">
+        Schedule Your Visit
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <img src="assets/logo.png" alt="PuppyLuv Paradise" class="h-12 rounded mb-6">
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Premium pet care for discerning pet parents.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-sm tracking-[0.2em] uppercase mb-6">Services</h4>
+          <ul class="space-y-3 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-white transition">Daycare</a></li>
+            <li><a href="#" class="hover:text-white transition">Training Programs</a></li>
+            <li><a href="#" class="hover:text-white transition">Grooming & Spa</a></li>
+            <li><a href="#" class="hover:text-white transition">Overnight Boarding</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm tracking-[0.2em] uppercase mb-6">Contact</h4>
+          <ul class="space-y-3 text-gray-400 text-sm">
+            <li>123 Puppy Lane</li>
+            <li>Paradise, CA 12345</li>
+            <li>(555) 123-9663</li>
+            <li>hello@puppyluvparadise.com</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm tracking-[0.2em] uppercase mb-6">Hours</h4>
+          <ul class="space-y-3 text-gray-400 text-sm">
+            <li>Monday – Friday: 6am – 8pm</li>
+            <li>Saturday: 8am – 6pm</li>
+            <li>Sunday: 9am – 5pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+        <p>&copy; 2026 PuppyLuv Paradise. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition">Privacy</a>
+          <a href="#" class="hover:text-white transition">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
