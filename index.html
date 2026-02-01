@@ -3,126 +3,459 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PuppyLuv Paradise - Template Selection</title>
+  <title>PuppyLuv Paradise | Dog Daycare, Training & Grooming in Lloydminster, AB</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             purple: {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
               brand: '#7b5ea7',
+            },
+            teal: {
+              accent: '#5bbfba',
             }
+          },
+          fontFamily: {
+            'display': ['Pacifico', 'cursive'],
+            'body': ['Nunito', 'sans-serif'],
           }
         }
       }
     }
   </script>
-  <style>body { font-family: 'Inter', sans-serif; }</style>
+  <style>
+    * { font-family: 'Nunito', sans-serif; }
+    .font-display { font-family: 'Pacifico', cursive; }
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+    .animate-bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+    .animate-float-delay { animation: float 6s ease-in-out infinite; animation-delay: 2s; }
+  </style>
 </head>
-<body class="bg-gray-100 min-h-screen py-12 px-4">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-12">
-      <img src="assets/logo.png" alt="PuppyLuv Paradise" class="h-20 mx-auto rounded-xl mb-6">
-      <h1 class="text-3xl font-bold text-gray-900 mb-2">Website Template Selection</h1>
-      <p class="text-gray-600">Choose your preferred design style for the PuppyLuv Paradise website</p>
-    </div>
+<body class="bg-white">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <img src="assets/logo.png" alt="PuppyLuv Paradise" class="h-10 md:h-14 rounded-lg">
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Template A -->
-      <a href="template-a.html" class="group">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-            <div class="text-center text-white">
-              <div class="text-6xl mb-2">🎉</div>
-              <div class="font-bold text-lg">Playful & Modern</div>
+        <!-- Mobile menu button -->
+        <button class="md:hidden p-2 rounded-full bg-purple-100 text-purple-brand">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#services" class="text-purple-brand font-semibold hover:text-purple-600 transition">Services</a>
+          <a href="#about" class="text-purple-brand font-semibold hover:text-purple-600 transition">About</a>
+          <a href="#contact" class="text-purple-brand font-semibold hover:text-purple-600 transition">Contact</a>
+          <a href="tel:780-871-0696" class="flex items-center gap-2 text-purple-brand font-semibold hover:text-purple-600 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            (780) 871-0696
+          </a>
+          <a href="#" class="bg-purple-brand text-white px-6 py-2.5 rounded-full font-bold hover:bg-purple-600 transition transform hover:scale-105">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20">
+    <!-- Background decorations -->
+    <div class="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-50 animate-float"></div>
+    <div class="absolute top-40 right-20 w-32 h-32 bg-teal-accent/30 rounded-full animate-float-delay"></div>
+    <div class="absolute bottom-20 left-1/4 w-16 h-16 bg-purple-300 rounded-full opacity-40 animate-bounce-slow"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-0">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="text-center md:text-left order-2 md:order-1">
+          <div class="inline-flex items-center gap-2 bg-purple-100 text-purple-brand px-4 py-2 rounded-full text-sm font-bold mb-4">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Lloydminster, AB
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight mb-6">
+            Where Every Pup Gets the
+            <span class="text-purple-brand font-display text-5xl sm:text-6xl lg:text-7xl block mt-2">Royal Treatment</span>
+          </h1>
+          <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+            Daycare, training & grooming services that your furry friend will absolutely love. Serving Lloydminster and area! 🐕
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#" class="bg-purple-brand text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-600 transition transform hover:scale-105 shadow-lg shadow-purple-brand/30">
+              Book a Visit ✨
+            </a>
+            <a href="https://maps.google.com/?q=5201+62+Street+Lloydminster+AB+T9V+2E3" target="_blank" class="border-2 border-purple-brand text-purple-brand px-8 py-4 rounded-full font-bold text-lg hover:bg-purple-50 transition flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 relative">
+          <div class="relative z-10">
+            <div class="bg-gradient-to-br from-purple-brand to-purple-600 rounded-[3rem] p-2 shadow-2xl shadow-purple-brand/30 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=700&fit=crop"
+                   alt="Happy dog"
+                   class="rounded-[2.5rem] w-full h-[400px] md:h-[500px] object-cover">
             </div>
           </div>
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-brand transition">Template A</h2>
-            <p class="text-gray-600 text-sm mb-4">
-              Energetic and fun with bouncy animations, rounded shapes, playful typography, and vibrant purple gradients. Perfect for a youthful, approachable brand.
-            </p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Floating decorative elements</li>
-              <li>• Animated badges & cards</li>
-              <li>• Bold CTAs with shadows</li>
-              <li>• Nunito + Pacifico fonts</li>
-            </ul>
+          <!-- Floating badges -->
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 animate-bounce-slow z-20">
+            <div class="flex items-center gap-2">
+              <span class="text-3xl">⭐</span>
+              <div>
+                <div class="font-bold text-gray-800">4.9 Rating</div>
+                <div class="text-sm text-gray-500">500+ Reviews</div>
+              </div>
+            </div>
           </div>
-          <div class="px-6 pb-6">
-            <div class="bg-purple-brand text-white text-center py-3 rounded-xl font-semibold group-hover:bg-purple-600 transition">
-              View Template A →
+          <div class="absolute -top-4 -right-4 bg-teal-accent text-white rounded-2xl shadow-xl p-4 animate-float z-20">
+            <div class="font-bold text-lg">🎉 First Visit</div>
+            <div class="text-sm">20% OFF!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gradient-to-b from-white to-purple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
+          Our Pawsome Services
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Everything your furry family member needs, all under one roof!
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Daycare Card -->
+        <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-purple-200 group">
+          <div class="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+            🏠
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Doggy Daycare</h3>
+          <p class="text-gray-600 mb-6">
+            A fun-filled day of play, socialization, and supervised activities. Your pup will come home tired and happy!
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center gap-2 text-gray-600">
+              <span class="text-teal-accent">✓</span> Supervised play groups
+            </li>
+            <li class="flex items-center gap-2 text-gray-600">
+              <span class="text-teal-accent">✓</span> Indoor & outdoor areas
+            </li>
+            <li class="flex items-center gap-2 text-gray-600">
+              <span class="text-teal-accent">✓</span> Webcam access
+            </li>
+          </ul>
+          <a href="#" class="text-purple-brand font-bold hover:text-purple-600 transition inline-flex items-center gap-2">
+            Learn More
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+
+        <!-- Training Card -->
+        <div class="bg-gradient-to-br from-purple-brand to-purple-600 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-white relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-teal-accent text-white text-xs font-bold px-4 py-1 rounded-bl-xl">
+            POPULAR
+          </div>
+          <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center text-4xl mb-6">
+            🎓
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Training Classes</h3>
+          <p class="text-purple-100 mb-6">
+            From puppies to seniors, our certified trainers will help your dog become their best self.
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center gap-2 text-purple-100">
+              <span class="text-teal-accent">✓</span> Puppy basics
+            </li>
+            <li class="flex items-center gap-2 text-purple-100">
+              <span class="text-teal-accent">✓</span> Obedience training
+            </li>
+            <li class="flex items-center gap-2 text-purple-100">
+              <span class="text-teal-accent">✓</span> Behavior modification
+            </li>
+          </ul>
+          <a href="#" class="bg-white text-purple-brand px-6 py-3 rounded-full font-bold inline-flex items-center gap-2 hover:bg-purple-50 transition">
+            Start Training →
+          </a>
+        </div>
+
+        <!-- Grooming Card -->
+        <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-purple-200 group">
+          <div class="w-20 h-20 bg-purple-100 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+            ✂️
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Spa & Grooming</h3>
+          <p class="text-gray-600 mb-6">
+            Pamper your pooch with our full-service grooming salon. They'll look and feel amazing!
+          </p>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center gap-2 text-gray-600">
+              <span class="text-teal-accent">✓</span> Bath & blow dry
+            </li>
+            <li class="flex items-center gap-2 text-gray-600">
+              <span class="text-teal-accent">✓</span> Haircuts & styling
+            </li>
+            <li class="flex items-center gap-2 text-gray-600">
+              <span class="text-teal-accent">✓</span> Nail & teeth care
+            </li>
+          </ul>
+          <a href="#" class="text-purple-brand font-bold hover:text-purple-600 transition inline-flex items-center gap-2">
+            Book Grooming
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-purple-brand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+          Happy Pups & Their Humans 💜
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-3xl p-8 relative">
+          <div class="text-5xl text-purple-200 absolute top-4 left-6">"</div>
+          <p class="text-gray-600 mb-6 relative z-10 pt-6">
+            Max used to have so much anxiety. After just a few weeks at PuppyLuv Paradise, he's a completely different dog. So grateful!
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">🐕</div>
+            <div>
+              <div class="font-bold text-gray-800">Sarah M.</div>
+              <div class="text-sm text-gray-500">Max's Mom</div>
             </div>
           </div>
         </div>
-      </a>
 
-      <!-- Template B -->
-      <a href="template-b.html" class="group">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-gray-100 to-purple-100 flex items-center justify-center border-b">
-            <div class="text-center">
-              <div class="text-6xl mb-2">✨</div>
-              <div class="font-bold text-lg text-gray-700">Elegant & Minimal</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-brand transition">Template B</h2>
-            <p class="text-gray-600 text-sm mb-4">
-              Sophisticated and refined with clean lines, generous whitespace, and subtle animations. Premium feel for discerning pet parents.
-            </p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Serif + sans-serif typography</li>
-              <li>• Geometric accents</li>
-              <li>• Muted color palette</li>
-              <li>• Cormorant + Inter fonts</li>
-            </ul>
-          </div>
-          <div class="px-6 pb-6">
-            <div class="bg-purple-brand text-white text-center py-3 rounded-xl font-semibold group-hover:bg-purple-600 transition">
-              View Template B →
+        <div class="bg-white rounded-3xl p-8 relative">
+          <div class="text-5xl text-purple-200 absolute top-4 left-6">"</div>
+          <p class="text-gray-600 mb-6 relative z-10 pt-6">
+            The grooming team is incredible! Bella always comes out looking like a model. And she actually enjoys going now!
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">🐩</div>
+            <div>
+              <div class="font-bold text-gray-800">Mike R.</div>
+              <div class="text-sm text-gray-500">Bella's Dad</div>
             </div>
           </div>
         </div>
-      </a>
 
-      <!-- Template C -->
-      <a href="template-c.html" class="group">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="h-48 bg-gradient-to-br from-orange-50 to-purple-100 flex items-center justify-center border-b">
-            <div class="text-center">
-              <div class="text-6xl mb-2">🏡</div>
-              <div class="font-bold text-lg text-gray-700">Warm & Friendly</div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-brand transition">Template C</h2>
-            <p class="text-gray-600 text-sm mb-4">
-              Inviting and cozy with warm cream tones, friendly typography, and trust-building elements. Home-away-from-home feeling.
-            </p>
-            <ul class="text-sm text-gray-500 space-y-1">
-              <li>• Photo collage hero</li>
-              <li>• Warm cream backgrounds</li>
-              <li>• Trust indicators prominent</li>
-              <li>• Fraunces + DM Sans fonts</li>
-            </ul>
-          </div>
-          <div class="px-6 pb-6">
-            <div class="bg-purple-brand text-white text-center py-3 rounded-xl font-semibold group-hover:bg-purple-600 transition">
-              View Template C →
+        <div class="bg-white rounded-3xl p-8 relative">
+          <div class="text-5xl text-purple-200 absolute top-4 left-6">"</div>
+          <p class="text-gray-600 mb-6 relative z-10 pt-6">
+            Best daycare ever! The staff clearly loves what they do. Cooper literally pulls me toward the door every morning!
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">🦮</div>
+            <div>
+              <div class="font-bold text-gray-800">Jessica T.</div>
+              <div class="text-sm text-gray-500">Cooper's Human</div>
             </div>
           </div>
         </div>
-      </a>
+      </div>
     </div>
+  </section>
 
-    <div class="text-center mt-12 text-gray-500 text-sm">
-      <p>Click on any template to view the full design. All templates are mobile-responsive.</p>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+            Come Visit Us! 🐾
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            We'd love to meet you and your furry friend. Stop by for a tour or give us a call to learn more about our services.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-purple-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Our Location</h3>
+                <p class="text-gray-600">5201 62 Street</p>
+                <p class="text-gray-600">Lloydminster, AB T9V 2E3</p>
+                <a href="https://maps.google.com/?q=5201+62+Street+Lloydminster+AB+T9V+2E3" target="_blank" class="text-teal-accent font-semibold hover:text-teal-600 transition inline-flex items-center gap-1 mt-2">
+                  Get Directions <span>→</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-purple-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-1">Phone</h3>
+                <a href="tel:780-871-0696" class="text-2xl font-bold text-purple-brand hover:text-purple-600 transition">(780) 871-0696</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-purple-50 rounded-3xl p-8">
+          <h3 class="font-bold text-gray-800 text-xl mb-6 flex items-center gap-2">
+            <span>🕐</span> When We're Open
+          </h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-purple-100">
+              <span class="font-semibold text-gray-700">Monday</span>
+              <span class="text-gray-600">7am – 6pm</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-purple-100">
+              <span class="font-semibold text-gray-700">Tuesday</span>
+              <span class="text-gray-600">7am – 6pm</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-purple-100">
+              <span class="font-semibold text-gray-700">Wednesday</span>
+              <span class="text-gray-600">7am – 6pm</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-purple-100">
+              <span class="font-semibold text-gray-700">Thursday</span>
+              <span class="text-gray-600 bg-teal-accent/20 px-2 py-1 rounded">7am – 8pm</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-purple-100">
+              <span class="font-semibold text-gray-700">Friday</span>
+              <span class="text-gray-600">7am – 6pm</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-purple-100">
+              <span class="font-semibold text-gray-700">Saturday</span>
+              <span class="text-gray-600 text-sm">Grooming by Appointment</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="font-semibold text-gray-700">Sundays & Holidays</span>
+              <span class="text-gray-500">Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-purple-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+        Ready to Give Your Pup the Best?
+      </h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Book a free meet & greet today and see why dogs love us!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="inline-block bg-purple-brand text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-purple-600 transition transform hover:scale-105 shadow-xl shadow-purple-brand/30">
+          Schedule Your Visit 🐾
+        </a>
+        <a href="tel:780-871-0696" class="inline-flex items-center justify-center gap-2 bg-white text-purple-brand px-10 py-5 rounded-full font-bold text-xl border-2 border-purple-brand hover:bg-purple-50 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          (780) 871-0696
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <img src="assets/logo.png" alt="PuppyLuv Paradise" class="h-12 rounded-lg mb-4">
+          <p class="text-gray-400">Where every pup gets the royal treatment they deserve.</p>
+          <p class="text-gray-500 mt-4 text-sm">5201 62 Street, Lloydminster, AB T9V 2E3</p>
+          <p class="text-gray-500 text-sm"><a href="tel:780-871-0696" class="hover:text-white transition">(780) 871-0696</a></p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Services</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white transition">Daycare</a></li>
+            <li><a href="#" class="hover:text-white transition">Training</a></li>
+            <li><a href="#" class="hover:text-white transition">Grooming</a></li>
+            <li><a href="#" class="hover:text-white transition">Boarding</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>5201 62 Street</li>
+            <li>Lloydminster, AB T9V 2E3</li>
+            <li><a href="tel:780-871-0696" class="hover:text-white transition">(780) 871-0696</a></li>
+          </ul>
+          <a href="https://maps.google.com/?q=5201+62+Street+Lloydminster+AB+T9V+2E3" target="_blank" class="inline-block mt-4 text-teal-accent hover:text-teal-300 transition text-sm font-medium">
+            Get Directions →
+          </a>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Hours</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><span class="text-gray-500">Mon:</span> 7am – 6pm</li>
+            <li><span class="text-gray-500">Tue:</span> 7am – 6pm</li>
+            <li><span class="text-gray-500">Wed:</span> 7am – 6pm</li>
+            <li><span class="text-gray-500">Thu:</span> 7am – 8pm</li>
+            <li><span class="text-gray-500">Fri:</span> 7am – 6pm</li>
+            <li><span class="text-gray-500">Sat:</span> Grooming by Appt</li>
+            <li><span class="text-gray-500">Sun:</span> Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+        <p>&copy; 2026 PuppyLuv Paradise. All rights reserved. Made with 💜</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
