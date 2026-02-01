@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | PuppyLuv Paradise - Lloydminster Dog Daycare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+              brand: '#7b5ea7',
+            },
+            teal: {
+              accent: '#5bbfba',
+            }
+          },
+          fontFamily: {
+            'display': ['Pacifico', 'cursive'],
+            'body': ['Nunito', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Nunito', sans-serif; }
+    .font-display { font-family: 'Pacifico', cursive; }
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+    .animate-bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-white">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16 md:h-20">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="PuppyLuv Paradise" class="h-10 md:h-14 rounded-lg">
+        </a>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full bg-purple-100 text-purple-brand">
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="text-purple-brand font-semibold hover:text-purple-600 transition">Home</a>
+          <a href="index.html#services" class="text-purple-brand font-semibold hover:text-purple-600 transition">Services</a>
+          <a href="about.html" class="text-purple-600 font-semibold border-b-2 border-purple-600">About</a>
+          <a href="index.html#contact" class="text-purple-brand font-semibold hover:text-purple-600 transition">Contact</a>
+          <a href="tel:780-871-0696" class="flex items-center gap-2 text-purple-brand font-semibold hover:text-purple-600 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            (780) 871-0696
+          </a>
+          <a href="index.html#contact" class="bg-purple-brand text-white px-6 py-2.5 rounded-full font-bold hover:bg-purple-600 transition transform hover:scale-105">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-purple-100 shadow-lg">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-purple-brand font-semibold py-2 hover:bg-purple-50 rounded-lg px-3 transition">Home</a>
+        <a href="index.html#services" class="block text-purple-brand font-semibold py-2 hover:bg-purple-50 rounded-lg px-3 transition">Services</a>
+        <a href="about.html" class="block text-purple-600 font-semibold py-2 bg-purple-50 rounded-lg px-3">About</a>
+        <a href="index.html#contact" class="block text-purple-brand font-semibold py-2 hover:bg-purple-50 rounded-lg px-3 transition">Contact</a>
+        <a href="tel:780-871-0696" class="flex items-center gap-2 text-purple-brand font-semibold py-2 hover:bg-purple-50 rounded-lg px-3 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          (780) 871-0696
+        </a>
+        <a href="index.html#contact" class="block bg-purple-brand text-white text-center px-6 py-3 rounded-full font-bold hover:bg-purple-600 transition">
+          Book Now
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-24 md:pt-32 pb-16 overflow-hidden bg-gradient-to-b from-purple-50 to-white">
+    <!-- Background decorations -->
+    <div class="absolute top-32 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-50 animate-float"></div>
+    <div class="absolute top-48 right-20 w-32 h-32 bg-teal-accent/30 rounded-full animate-bounce-slow"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-block bg-purple-100 text-purple-brand px-4 py-2 rounded-full text-sm font-bold mb-4">
+          🐾 Our Story
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight mb-6">
+          About
+          <span class="text-purple-brand font-display text-5xl sm:text-6xl lg:text-7xl"> PuppyLuv Paradise</span>
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          More than just a daycare — we're a family of dog lovers dedicated to giving your furry friends the happiest days of their lives.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+            How It All Started 💜
+          </h2>
+          <p class="text-gray-600 mb-4 leading-relaxed">
+            PuppyLuv Paradise was born from a simple belief: every dog deserves a place where they can be their true, tail-wagging selves. What started as a passion project has grown into Lloydminster's most trusted destination for dog daycare, training, and grooming.
+          </p>
+          <p class="text-gray-600 mb-4 leading-relaxed">
+            We understand that your dog isn't just a pet — they're family. That's why we've created a space where dogs can socialize, learn, and play in a safe, loving environment while their humans go about their busy days with peace of mind.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Every member of our team shares an unwavering love for dogs. We're not just caregivers; we're advocates for your pet's happiness, health, and well-being.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="bg-gradient-to-br from-purple-brand to-purple-600 rounded-3xl p-2 shadow-2xl shadow-purple-brand/30 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=500&fit=crop"
+                 alt="Happy dogs playing together"
+                 class="rounded-2xl w-full h-[400px] object-cover">
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 animate-bounce-slow">
+            <div class="flex items-center gap-3">
+              <span class="text-4xl">🏆</span>
+              <div>
+                <div class="font-bold text-gray-800">Trusted by</div>
+                <div class="text-purple-brand font-bold">500+ Families</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-purple-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
+          What We Believe In
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Our core values guide everything we do at PuppyLuv Paradise.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+            💖
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Love First</h3>
+          <p class="text-gray-600 text-sm">
+            Every interaction is rooted in genuine love and affection for your furry family member.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+            🛡️
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Safety Always</h3>
+          <p class="text-gray-600 text-sm">
+            Your pet's safety is our top priority. We maintain strict protocols and supervision at all times.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+            🌟
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Excellence</h3>
+          <p class="text-gray-600 text-sm">
+            We strive for excellence in everything — from grooming to training to daily care.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+            🤝
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Trust</h3>
+          <p class="text-gray-600 text-sm">
+            We build lasting relationships with pet parents based on transparency and reliability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-purple-brand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+          Why Families Choose Us 🐕
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <div class="text-4xl mb-4">👩‍⚕️</div>
+          <h3 class="text-xl font-bold text-white mb-3">Trained Staff</h3>
+          <p class="text-purple-100">
+            Our team is certified in pet first aid, behavior management, and grooming. Your pup is in expert hands.
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <div class="text-4xl mb-4">🏠</div>
+          <h3 class="text-xl font-bold text-white mb-3">Clean Facility</h3>
+          <p class="text-purple-100">
+            We maintain hospital-level cleanliness with regular sanitization throughout the day.
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <div class="text-4xl mb-4">📱</div>
+          <h3 class="text-xl font-bold text-white mb-3">Stay Connected</h3>
+          <p class="text-purple-100">
+            Get photo updates throughout the day so you never miss a moment of your pup's adventures.
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <div class="text-4xl mb-4">🎾</div>
+          <h3 class="text-xl font-bold text-white mb-3">Enrichment Activities</h3>
+          <p class="text-purple-100">
+            Mental stimulation and physical exercise keep your dog happy, healthy, and tired at the end of the day!
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <div class="text-4xl mb-4">🐕‍🦺</div>
+          <h3 class="text-xl font-bold text-white mb-3">Supervised Play</h3>
+          <p class="text-purple-100">
+            Dogs are grouped by size and temperament to ensure safe, positive interactions for everyone.
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <div class="text-4xl mb-4">❤️</div>
+          <h3 class="text-xl font-bold text-white mb-3">Individual Attention</h3>
+          <p class="text-purple-100">
+            Every dog gets one-on-one cuddle time because we know sometimes they just need a little extra love.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
+          Meet Our Pack 🐾
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Our passionate team of dog lovers is dedicated to making every visit special.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center group">
+          <div class="relative mb-6 inline-block">
+            <div class="w-48 h-48 mx-auto bg-gradient-to-br from-purple-200 to-purple-300 rounded-full flex items-center justify-center text-6xl group-hover:scale-105 transition-transform">
+              👩‍💼
+            </div>
+            <div class="absolute -bottom-2 -right-2 bg-teal-accent text-white rounded-full px-3 py-1 text-sm font-bold">
+              Founder
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">Sarah Johnson</h3>
+          <p class="text-purple-brand font-semibold mb-3">Owner & Lead Trainer</p>
+          <p class="text-gray-600 text-sm max-w-xs mx-auto">
+            With 15+ years in animal care, Sarah's passion for dogs led her to create PuppyLuv Paradise.
+          </p>
+        </div>
+
+        <div class="text-center group">
+          <div class="relative mb-6 inline-block">
+            <div class="w-48 h-48 mx-auto bg-gradient-to-br from-purple-200 to-purple-300 rounded-full flex items-center justify-center text-6xl group-hover:scale-105 transition-transform">
+              👨‍🔧
+            </div>
+            <div class="absolute -bottom-2 -right-2 bg-purple-brand text-white rounded-full px-3 py-1 text-sm font-bold">
+              Grooming
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">Mike Chen</h3>
+          <p class="text-purple-brand font-semibold mb-3">Head Groomer</p>
+          <p class="text-gray-600 text-sm max-w-xs mx-auto">
+            A certified master groomer who can make any pup look like a show dog!
+          </p>
+        </div>
+
+        <div class="text-center group">
+          <div class="relative mb-6 inline-block">
+            <div class="w-48 h-48 mx-auto bg-gradient-to-br from-purple-200 to-purple-300 rounded-full flex items-center justify-center text-6xl group-hover:scale-105 transition-transform">
+              👩‍🏫
+            </div>
+            <div class="absolute -bottom-2 -right-2 bg-purple-brand text-white rounded-full px-3 py-1 text-sm font-bold">
+              Training
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">Emily Rodriguez</h3>
+          <p class="text-purple-brand font-semibold mb-3">Senior Trainer</p>
+          <p class="text-gray-600 text-sm max-w-xs mx-auto">
+            Specializing in positive reinforcement, Emily helps dogs and owners build lasting bonds.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-purple-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6">
+        Ready to Join Our Family?
+      </h2>
+      <p class="text-lg text-gray-600 mb-8">
+        Schedule a visit and see why dogs (and their humans) love PuppyLuv Paradise!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="index.html#contact" class="inline-block bg-purple-brand text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-purple-600 transition transform hover:scale-105 shadow-xl shadow-purple-brand/30">
+          Schedule a Tour 🐾
+        </a>
+        <a href="tel:780-871-0696" class="inline-flex items-center justify-center gap-2 bg-white text-purple-brand px-10 py-5 rounded-full font-bold text-xl border-2 border-purple-brand hover:bg-purple-50 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          (780) 871-0696
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <img src="assets/logo.png" alt="PuppyLuv Paradise" class="h-12 rounded-lg mb-4">
+          <p class="text-gray-400">Where every pup gets the royal treatment they deserve.</p>
+          <p class="text-gray-500 mt-4 text-sm">5201 62 Street, Lloydminster, AB T9V 2E3</p>
+          <p class="text-gray-500 text-sm"><a href="tel:780-871-0696" class="hover:text-white transition">(780) 871-0696</a></p>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Services</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html#services" class="hover:text-white transition">Daycare</a></li>
+            <li><a href="index.html#services" class="hover:text-white transition">Training</a></li>
+            <li><a href="index.html#services" class="hover:text-white transition">Grooming</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Company</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-lg mb-4">Hours</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><span class="text-gray-500">Mon:</span> 7am – 6pm</li>
+            <li><span class="text-gray-500">Tue:</span> 7am – 6pm</li>
+            <li><span class="text-gray-500">Wed:</span> 7am – 6pm</li>
+            <li><span class="text-gray-500">Thu:</span> 7am – 8pm</li>
+            <li><span class="text-gray-500">Fri:</span> 7am – 6pm</li>
+            <li><span class="text-gray-500">Sat:</span> Grooming by Appt</li>
+            <li><span class="text-gray-500">Sun:</span> Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+        <p>&copy; 2026 PuppyLuv Paradise. All rights reserved. Made with 💜</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
